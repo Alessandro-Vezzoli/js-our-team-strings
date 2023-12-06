@@ -21,5 +21,35 @@ Inserire un form per l’aggiunta di un elemento alla lista.
 //MILESTONE 1
 
 // creare un array di stringhe conn i nome del membri dei team
+var userName = ["Luca", "Matteo", "Asia", "Alessandro"];
 
 //stampare le informazioni su delle card
+for (var i = 0; i < userName.length; i++) {
+  console.log(userName[i]);
+
+  const div = document.createElement("div");
+  div.className = "card m-3";
+  div.style.width = "18rem";
+  console.log(div);
+
+  const img = document.createElement("img");
+  img.src = "./img/user.png";
+  img.className = "card-img-top";
+  img.alt = "user";
+  console.log(img);
+
+  const secondDiv = document.createElement("div");
+  secondDiv.className = "card-body";
+  console.log(secondDiv);
+
+  const titleUser = document.createElement("h5");
+  titleUser.className = "card-title text-center";
+  titleUser.textContent = userName[i];
+  console.log(titleUser);
+
+  secondDiv.appendChild(titleUser);
+  div.appendChild(img);
+  div.appendChild(secondDiv);
+  document.getElementById("card-container").appendChild(div);
+}
+function card() {}

@@ -16,7 +16,7 @@ Inserire un form per l’aggiunta di un elemento alla lista.
 //array
 //document.getElementById
 //function
-//document.querySelector
+//onclick
 
 //MILESTONE 1
 
@@ -47,9 +47,18 @@ for (var i = 0; i < userName.length; i++) {
   titleUser.textContent = userName[i];
   console.log(titleUser);
 
+  const button = document.createElement("a");
+  button.className = "btn btn-primary";
+  button.textContent = "Scopri di più";
+  button.onclick = function () {
+    div.className = "d-none";
+  };
+
+  console.log(button);
+
   secondDiv.appendChild(titleUser);
   div.appendChild(img);
   div.appendChild(secondDiv);
+  div.appendChild(button);
   document.getElementById("card-container").appendChild(div);
 }
-function card() {}
